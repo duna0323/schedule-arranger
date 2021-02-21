@@ -133,6 +133,16 @@ buttonSelfComment.click(function () {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()('#self-comment').text(data.comment);
     });
   }
+}); //Switch light/dark
+
+jquery__WEBPACK_IMPORTED_MODULE_0___default()("#switch").on('click', function () {
+  if (jquery__WEBPACK_IMPORTED_MODULE_0___default()("body").hasClass("light")) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()("body").removeClass("light");
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()("#switch").removeClass("switched");
+  } else {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()("body").addClass("light");
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()("#switch").addClass("switched");
+  }
 });
 
 /***/ }),
