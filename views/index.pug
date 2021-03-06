@@ -1,33 +1,33 @@
 extends layout
 
 block content
-  .section.full-height.over-hide
-    .switch-wrap
-      h1 予定調整くん
-      #switch.hover-target
-        #circle
-      p
-        span dark
-        | -
-        span light
-      #cursor.cursor
-      #cursor2.cursor2
-      #cursor3.cursor3
-      p.hover-target 予定調整くんは、GitHubで認証でき、予定を作って出欠が取れるサービスです
-      .
-        <iframe src="https://openprocessing.org/sketch/1083414/embed/" width="800" height="400"></iframe>
-  if user
-    div
-      a.hover-target(href="/schedules/new").btn 予定を作る
-    - var hasSchedule = schedules.length > 0
-    if hasSchedule
-      h3.hover-target あなたの作った予定一覧
-      table.table
-        tr
-          th 予定名
-          th 更新日時
-        each schedule in schedules  
+    .section.full-height.over-hide
+      .switch-wrap
+        h1 予定調整くん
+        #switch.hover-target
+          #circle
+        p
+          span dark
+          | -
+          span light
+        #cursor.cursor
+        #cursor2.cursor2
+        #cursor3.cursor3
+        p.hover-target 予定調整くんは、GitHubで認証でき、予定を作って出欠が取れるサービスです
+        .
+          <iframe src="https://openprocessing.org/sketch/1083414/embed/" width="800" height="400"></iframe>
+    if user
+      div
+        a.hover-target(href="/schedules/new").btn 予定を作る
+      - var hasSchedule = schedules.length > 0
+      if hasSchedule
+        h3.hover-target あなたの作った予定一覧
+        table.table
           tr
-          td
-            a.hover-target(href=`/schedules/${schedule.scheduleId}`) #{schedule.scheduleName}
-          td #{schedule.formattedUpdatedAt}
+            th 予定名
+            th 更新日時
+          each schedule in schedules  
+            tr
+            td
+              a.hover-target(href=`/schedules/${schedule.scheduleId}`) #{schedule.scheduleName}
+            td #{schedule.formattedUpdatedAt}

@@ -25,7 +25,12 @@ html
                 a.hover-target(href="/logout") #{user.username} をログアウト
             else
               li(class='nav__list-item active-nav')
-                a.hover-target(href="/login") ログイン  
+                a.hover-target(href="/login") ログイン 
+      .section.full-height.over-hide
+        .switch-wrap
+        #cursor.cursor
+        #cursor2.cursor2
+        #cursor3.cursor3           
     div.container
       block content
     script(src="/javascripts/bundle.js")
