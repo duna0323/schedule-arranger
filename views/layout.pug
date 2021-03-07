@@ -8,17 +8,19 @@ html
     href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css",
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm",
     crossorigin="anonymous")
+    link(rel="shortcut icon" href="images/favicon.ico" type="image/x-icon")
+    link(rel="stylesheet" href="images/style.css")
   body
-    nav.navbar.navbar-light.bg-light
+    nav.navbar.navbar-dark.bg-dark
       div.navbar-header
-        a(href="/").navbar-brand.nav-link 予定調整くん
+        a.hover-target(href="/").navbar-brand.nav-link 予定調整くん
       ul.navbar-nav
         if user
           li.nav-item
             a(href="/logout").nav-link #{user.username} をログアウト
         else
           li.nav-item
-            a(href="/login").nav-link ログイン  
+            a(href="/login").nav-link ログイン 
     div.container
       block content
     script(src="/javascripts/bundle.js")

@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "bootstrap": "4.0.0",
+    "bootstrap-icons": "^1.4.0",
     "cookie-parser": "~1.4.3",
     "csurf": "1.8.3",
     "debug": "~2.6.9",
@@ -39,5 +40,5 @@
   },
   "engines": {
     "node": "~10"
-   }
+  }
 }
