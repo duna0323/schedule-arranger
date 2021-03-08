@@ -1,7 +1,7 @@
 extends layout
 
 block content
-  div.jumbotron.my-3
+  div.jumbotron.col.my-3
     h3.my-3 予定の編集
     form(method="post", action=`/schedules/${schedule.scheduleId}?edit=1`)
       input(type="hidden" name="_csrf" value!=csrfToken)
@@ -24,4 +24,5 @@ block content
       form(method="post", action=`/schedules/${schedule.scheduleId}?delete=1`)
         input(type="hidden" name="_csrf" value!=csrfToken)
         button(type="submit").btn.btn-danger この予定を削除する
-    img.ml-3(src="/images/pixel-cells-3674112_640.png" alt="Responsive image")
+  div.jumbotron.col.my-3
+    img.rounded.float-right(src="/images/pixel-cells-3674112_640.png" alt="Responsive image")
