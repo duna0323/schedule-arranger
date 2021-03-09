@@ -1,6 +1,5 @@
 
-body ,
-.container {
+body {
   background-color: #8b0000;
 }
 
@@ -11,4 +10,8 @@ a {
 
 a:hover {
   text-decoration: none;
+}
+
+.col {
+  float: left;
 }
